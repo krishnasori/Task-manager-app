@@ -3,7 +3,7 @@
 **Brief:** Exercise 1 - Personal Task Manager  
 A robust, full-stack task management interface designed with a dark, atmospheric terminal aesthetic. It allows users to initialize, track, search, filter, and purge tasks with real-time UI updates and backend data persistence.
 
-**Live Demo:** [Link to be added after deployment]
+**Live Demo:** https://task-manager-app-ten-gules.vercel.app/
 
 ---
 
