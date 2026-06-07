@@ -10,7 +10,7 @@ function App() {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://localhost:3000/tasks')
+      const response = await fetch('https://task-manager-app-wgkz.onrender.com/tasks')
       const data = await response.json()
       setTasks(data)
     } catch (error) {
@@ -26,7 +26,7 @@ function App() {
     e.preventDefault()
     if (!title) return
 
-    await fetch('http://localhost:3000/tasks', {
+    await fetch('https://task-manager-app-wgkz.onrender.com/tasks', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, dueDate })
@@ -38,7 +38,7 @@ function App() {
   }
 
   const toggleComplete = async (task) => {
-    await fetch(`http://localhost:3000/tasks/${task.id}`, {
+    await fetch(`https://task-manager-app-wgkz.onrender.com/tasks/${task.id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ completed: !task.completed })
@@ -48,7 +48,7 @@ function App() {
 
   const deleteTask = async (id) => {
     if (!window.confirm("Are you sure you want to delete this task?")) return;
-    await fetch(`http://localhost:3000/tasks/${id}`, {
+    await fetch(`https://task-manager-app-wgkz.onrender.com/tasks/${id}`, {
       method: 'DELETE'
     })
     fetchTasks()
